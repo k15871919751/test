@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>编号</th>
+            <th>成绩</th>
+            <th>操作</th>
+        </tr>
+        <tr th:each="Stuitem:${stu}">
+            <td th:text="${Stuitem.name}"></td>
+            <td th:text="${Stuitem.reg_No}"></td>
+            <td th:text="${Stuitem.grade}"></td>
+            <td><a th:href="@{'delete/'+${Stuitem.id}}">删除</a>
+                <a th:href="@{'toUpdate/'+${Stuitem.id}}">更新</a>
+                <a th:href="@{'toSelect/'}">查找</a></td>
+            <td><a th:href="@{'toInsert/'}">增加</a></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>插入学生信息</title>
+</head>
+<body>
+<form  action="/thymeleaf/insert" method="post" >
+    姓名:<input th:type="text" th:name="name" >
+    編號:<input th:type="text" th:name="reg_No" >
+    成績:<input th:type="text" th:name="grade">
+    存储:<input th:type="test" th:name="card_No">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
